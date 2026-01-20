@@ -1,0 +1,24 @@
+# --- Directorios de compilación y salida ---
+[Bb]in/
+[Oo]bj/
+out/
+
+# --- Archivos de usuario y caché de Visual Studio / VS Code ---
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.sln.docstates
+
+# --- Paquetes NuGet ---
+*.nupkg
+# Si usas una carpeta local de paquetes (poco común hoy en día, pero por si acaso)
+packages/
+
+# --- Archivos del sistema operativo ---
+.DS_Store
+Thumbs.db
+
+# --- Otros archivos temporales ---
+*.log
+*.tmp
