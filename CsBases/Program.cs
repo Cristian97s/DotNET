@@ -6,22 +6,12 @@ class Program
 {
     static void Main()
     {
-        //Console.WriteLine("Hello, World!");
-
-        //Declaracion explicita
-        int quantity = 5;
-        string message = "Hello World";
-        decimal price = 19.99m;
-        //Console.WriteLine($" Cantidad: {quantity}, Saludo: {message}, Precio: {price:C}");
-
-        //Declaracion con var
-        var gretting = "Hola";
-        var percentage = 20.00m;
-        //Console.WriteLine($" Saludo: {gretting}, Porcentaje: {percentage}");
-
         var laptop = new Product("Laptop", 1200);
         Console.WriteLine(laptop.GetDescription());
         var soporte = new ServiceProduct("Soporte tecnico", 300, 30);
         Console.WriteLine(soporte.GetDescription());
+        var product = new Product("Mouse Gamer", 300);
+        var productDto = ProductAdapter.ToDto(product);
+        Console.WriteLine($"{productDto.Name} - {productDto.Price:C} - Codigo: {productDto.Code}");
     }
 }
