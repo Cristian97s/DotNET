@@ -4,7 +4,7 @@ using CsBases.Fundamentals;
 
 class Program
 {
-    static void Main()
+    static async Task Main()
     {
         var laptop = new Product("Laptop", 1200);
         Console.WriteLine(laptop.GetDescription());
@@ -21,5 +21,7 @@ class Program
         var installation = new ServiceProduct("Instalacion de monitor",20,30);
         manager.PrintLabel(monitor);
         manager.PrintLabel(installation);
+        var firstProduct = await new ProducRepository().GetProduct(1);
+        Console.WriteLine($"{firstProduct.Name} - {firstProduct.Price}");
     }
 }
