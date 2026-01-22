@@ -7,7 +7,10 @@ public class Product : IProduct
 {
     // propiedades
     public int Id { get; set; }
+    [UpperCase]
     public string? Name { get; set; }
+    [UpperCase]
+    public string? description { get; set; }
     public decimal Price { get; set; }
     public bool IsAvaible { get; set; }
     public DateTime CreatedAt { get; set; }

@@ -22,6 +22,8 @@ class Program
         manager.PrintLabel(monitor);
         manager.PrintLabel(installation);
         var firstProduct = await new ProducRepository().GetProduct(1);
-        Console.WriteLine($"{firstProduct.Name} - {firstProduct.Price}");
+        firstProduct.description = "Esta es la descripcoon del primer producto";
+        AttributeProcessor.ApplyUpperCase(firstProduct);
+        Console.WriteLine($"{firstProduct.Name} - {firstProduct.Price} - {firstProduct.description}");
     }
 }
